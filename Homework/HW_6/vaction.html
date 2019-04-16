@@ -1,0 +1,92 @@
+<html>
+
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Slabo+27px" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"></script>
+  </head>
+    <style>
+      body{
+        background-color: #0a290a;
+        font-family:'Slabo 27px', serif;
+        color: white
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-gap: 10px
+        background-color: rgba(0, 0, 0, 0.0);
+        padding: 10px;
+      }
+      .item1{
+        grid-area: 1 / 1 / span 1 / span 2;
+        text-align: center;
+        color: white;
+
+      }
+      .item2{
+        text-align: center;
+        color: white;
+
+      }
+      #logo{
+        img-align: middle;
+        img-width: 10%;
+      }
+      #title{
+        font-family: 'Amatic SC', cursive;
+        font-size: 125px;
+        color:#B0B0B0;
+        text-align: center;
+      }
+      #list{
+        font-size:25px;
+        text-align: center;
+      }
+      .headings{
+        font-size:50px;
+        text-align: center;
+      }
+      #intro{
+        text-align: center;
+      }
+    </style>
+
+  <body>
+    <header>
+      <h1 id="title" onclick="new Effect.Puff('intro'); return false;">The Pacific Northwest</h1>
+      <p id="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet luctus venenatis lectus magna fringilla urna. Id neque aliquam vestibulum morbi blandit cursus risus. Arcu non odio euismod lacinia at quis risus sed. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Vitae elementum curabitur vitae nunc. Sit amet volutpat consequat mauris nunc congue nisi vitae suscipit. Sed risus pretium quam vulputate dignissim suspendisse. Sed felis eget velit aliquet sagittis. Vitae aliquet nec ullamcorper sit amet risus nullam eget felis. Lorem dolor sed viverra ipsum nunc. Integer quis auctor elit sed vulputate mi sit amet. Donec adipiscing tristique risus nec feugiat in fermentum posuere. Cras sed felis eget velit aliquet sagittis id consectetur. Blandit cursus risus at ultrices mi tempus imperdiet nulla. Tortor condimentum lacinia quis vel eros.</p>
+    </header>
+    <main>
+      <h2 class="headings" onclick="Effect.toggle('do', 'slide'); return false;"> What to Do</h2>
+      <div id="do">
+      <div class="grid-container">
+        <div class="item1"><a data-fancybox="gallery" href="pnw/pnw5.jpeg"><img src="pnw/rainier.jpg" width="600" height="400"></a><p>Rainier National Park - Washington</p></div>
+        <div class="item2"><a data-fancybox="gallery" href="pnw/pnw6.jpg"><img src="pnw/pnw4.jpg" width="400" height="400"></a><p>Ecola State Park - Oregon</p></div>
+        <div class="item2"><a data-fancybox="gallery" href="pnw/pnw1.jpeg"><img src="pnw/pnw3.jpg" width="400" height="400"></a><p>Hoh Rainforest - Washington</p></div>
+        <div class="item2"><a data-fancybox="gallery" href="pnw/pnw8.jpg"><img src="pnw/pnw2.jpg" width="400" height="400"></a><p>Multnomah Falls - Oregon</p></div>
+        <div class="item2"><a data-fancybox="gallery" href="pnw/pnw7.jpg"><img src="pnw/pike.jpeg" width="400" height="400"></a><p>Pike Place Market - Washington</p></div>
+      </div>
+      </div>
+      <div id="fold_demo">
+        <h2 class="headings" onclick="Effect.Fold('fold_demo'); return false;">Where to Stay</h2>
+        <ul>
+          <li>Clayoquot Wilderness Resort</li>
+          <li>Panacea at the Canyon</li>
+          <li>Fairmont Olympic Hotel</li>
+          <li>Wickaninnish Inn</li>
+          <li>Tree House Point</li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <center><a href="#title" onclick="Effect.ScrollTo('#logo'); return false;"><img src="pnw/pnw-logo.png" width="10%"></a></center>
+
+    </footer>
+  </body>
+
+</html>
